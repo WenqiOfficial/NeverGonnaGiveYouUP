@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>❥芬芳影业-跳转中...</title>
+</head>
+<body>
+<center><h2>正在跳转，请稍后...</h2>
+<p>将在<span id="time" class="blue">10</span>秒后进行跳转</p><br>
+<a href="./18r" class="blue">手动跳转</a></center>
+</body>
+</html>
+<script>function delayUrl(url) {
+    var ia = document.getElementById('time').innerHTML;
+    if (ia > 0) {
+      ia--;
+      document.getElementById('time').innerHTML = ia;
+    } else {
+      window.location.href = url;
+    }
+    setTimeout("delayUrl('" + url + "')", 1000);
+  }
+  delayUrl("./18r");</script>
+  
+<style>
+.blue {
+	color: #0000ff;
+}
+</style>
